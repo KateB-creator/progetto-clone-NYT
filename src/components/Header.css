@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Josefin+Sans:wght@100..700&family=Oswald:wght@200..700&family=Playfair+Display:wght@400..900&family=Sancreek&family=Work+Sans:wght@100..900&display=swap');
+
+/* Stile generale dell'header */
+.nyt-header {
+  font-family: Arial, sans-serif;
+  color: black;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Barra superiore */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Mostra la top-bar solo su desktop */
+.desktop-only {
+  display: flex;
+}
+
+/* Nasconde la top-bar dentro il menu mobile di default */
+.mobile-only {
+  display: none;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subscribe-btn {
+  background-color: rgb(86, 123, 149);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Sezione Logo + Menu Hamburger */
+.logo-section {
+  display: flex;
+  justify-content: center; /* Centra il contenuto */
+  align-items: center;
+  padding: 15px;
+
+}
+
+/* Centra il logo al centro della sezione */
+.logo-section svg {
+  max-width: 40%;
+  position: relative;
+  left: 43%;
+  transform: translateX(-100%);
+}
+
+/* Stile del menu hamburger */
+.hamburger-menu {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Nascondi su desktop */
+}
+
+/* Menu mobile */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+}
+
+/* Quando il menu è aperto */
+.mobile-menu.open {
+  display: flex;
+}
+
+/* Stile della barra di navigazione principale */
+.nav-bar {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+  display: flex; /* Assicura che sia visibile su desktop */
+  justify-content: center;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.nav-bar li {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.nav-bar li:hover {
+  text-decoration: underline;
+}
+
+/* Stile della barra di navigazione personalizzata */
+.custom-nav {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+  background-color: #fff;
+  display: flex; /* Assicura che sia visibile su desktop */
+  justify-content: center;
+}
+
+.custom-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.custom-nav li {
+  margin: 0 15px;
+}
+
+.custom-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.custom-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design per Mobile */
+@media screen and (max-width: 768px) {
+  /* Header diventa colonna */
+  .nyt-header {
+    flex-direction: column;
+  }
+
+  .logo-section {
+    justify-content: space-between; /* Mantiene il layout tra logo e menu */
+  }
+
+  .logo-section svg {
+    position: static;
+    transform: none;
+    max-width: 50%; /* Adatta la dimensione del logo su mobile */
+  }
+
+  /* Nasconde la navbar principale e la custom-nav di default su mobile */
+  .top-bar, .nav-bar, .custom-nav {
+    display: none;
+  }
+
+  /* Mostra il menu hamburger solo su mobile */
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Se il menu è aperto, mostra navbar e top-bar dentro il menu */
+  .mobile-menu.open .nav-bar,
+  .mobile-menu.open .custom-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Mostra la top-bar dentro il menu mobile */
+  .mobile-menu.open .mobile-only {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Nasconde la top-bar principale su mobile */
+  .desktop-only {
+    display: none;
+  }
+
+  /* Centra gli elementi del menu */
+  .nav-bar ul, .custom-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar li, .custom-nav li {
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,120 @@
+/* Contenitore principale */
+.women-tech-container {
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'EB Garamond', serif;
+  }
+  
+  /* Hero Section (Immagine di copertura e titolo) */
+  .hero {
+    background: url('https://via.placeholder.com/900x300') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  /* Sezione citazioni */
+  .quotes-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .quote {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    text-align: center;
+  }
+  
+  .quote p {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+  }
+  
+  /* Sezione articoli */
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  article {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  article h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  article p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  article a {
+    text-decoration: none;
+    color: #900;
+    font-weight: bold;
+  }
+  
+  article a:hover {
+    text-decoration: underline;
+  }
+
+  /* Immagini nelle citazioni */
+.quote-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  /* Immagini negli articoli */
+  .article-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  
+  /* Stile responsivo */
+  @media (max-width: 768px) {
+    .articles {
+      grid-template-columns: 1fr;
+    }
+  
+    .quotes-section {
+      flex-direction: column;
+    }
+  
+    .quote {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
