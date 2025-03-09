@@ -83,6 +83,14 @@
     text-decoration: underline;
   }
 
+  .article-image {
+    width: 100%; /* Larghezza adattabile */
+    max-width: 200px; /* Imposta una dimensione massima */
+    display: block;
+    margin: 0 auto 15px; /* Centra l'immagine e aggiunge spazio sotto */
+    border-radius: 8px; /* Bordo arrotondato, opzionale */
+  }
+
   /* Immagini nelle citazioni */
 .quote-img {
     width: 80px;
@@ -101,6 +109,25 @@
     margin-bottom: 15px;
   }
   
+  /* Rimuove il colore di sfondo azzurro dell'accordion quando non è attivo */
+.accordion-button {
+  background-color: transparent !important; /* Sfondo trasparente */
+  color: #000 !important; /* Testo nero o del colore che preferisci */
+  box-shadow: none !important; /* Rimuove eventuali ombre */
+  border: none; /* Rimuove i bordi */
+}
+
+/* Cambia colore quando l'accordion è attivo */
+.accordion-button:not(.collapsed) {
+  background-color: #f8f9fa !important; /* Un colore più neutro */
+  color: #000 !important;
+}
+
+/* Rimuove il bordo di focus quando si clicca */
+.accordion-button:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
   
   /* Stile responsivo */
   @media (max-width: 768px) {

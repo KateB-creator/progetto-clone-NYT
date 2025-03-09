@@ -25,7 +25,7 @@ const selectImage = (multimedia) => {
   
   // Prova a selezionare l'immagine più grande disponibile
   const largeImage = multimedia.find(media => media.format === "superJumbo");
-  return largeImage ? largeImage.url : multimedia[0].url; // Usa la prima disponibile se non c'è "superJumbo"
+  return largeImage ? largeImage.url : multimedia[0].url; 
 };
 
 

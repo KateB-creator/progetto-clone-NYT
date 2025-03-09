@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import WomenInTech from './pages/WomenInTech';
 import Science from './pages/Science';
 import Technology from './pages/Technology';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function App() {
   return (
