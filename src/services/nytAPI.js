@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = '2PZqgCAVQu3cEyYGI5zNApOvj4AS5YSL';  // Sostituisci con la tua chiave
+const API_KEY = '2PZqgCAVQu3cEyYGI5zNApOvj4AS5YSL';  
 const BASE_URL = 'https://api.nytimes.com/svc/topstories/v2';
 
 // Funzione generica per ottenere articoli da una sezione specifica
@@ -23,7 +23,7 @@ export const getTopStories = async (section = 'home') => {
 const selectImage = (multimedia) => {
   if (!multimedia || multimedia.length === 0) return null;
   
-  // Prova a selezionare l'immagine più grande disponibile
+  
   const largeImage = multimedia.find(media => media.format === "superJumbo");
   return largeImage ? largeImage.url : multimedia[0].url; 
 };

@@ -18,23 +18,20 @@ function WomenInTech() {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img src="/assets/emancipazione.png"  className="d-block w-100" alt="Emancipazione" />
-              <div className="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+              <div className="carousel-caption  d-none d-md-block">
+                <p>Insieme, donne e tecnologia, per un mondo più equo.</p>
               </div>
             </div>
             <div className="carousel-item">
               <img src="/assets/emancipazioneDue.png"  className="d-block w-100" alt="Emancipazione2" />
               <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Celebrating the women who are changing the world of technology and development.</p>
+                <p>Donne che innovano, tecnologie che cambiano il mondo.</p>
               </div>
             </div>
             <div className="carousel-item">
               <img src="/assets/emancipazioneTre.png"  className="d-block w-100" alt="Emancipazione3" />
               <div className="carousel-caption d-none d-md-block">
-                <h5>Women in Tech</h5>
-                <p>Celebrating the women who are changing the world of technology and development.</p>
+                <p>Il futuro è scritto in codice... e al femminile.</p>
               </div>
             </div>
           </div>
@@ -132,7 +129,24 @@ function WomenInTech() {
           <a href="#">Leggi di più</a>
         </article>
       </section>
+
+      <section clssName="articleTwo">
+        <div className="container text-center">
+          <div className="row align-items-start">
+            <div className="col">
+            One of three columns
+            </div>
+            <div className="col">
+            One of three columns
+            </div>
+            <div className="col">
+            One of three columns
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+
   );
 }
 

@@ -18,7 +18,7 @@ function Home() {
     <div className="container">
       {/* Sezione Hero: Primo articolo in evidenza */}
       <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-7">
           {articles.length > 0 && (
             <div className="article-card article-hero">
               <img src={articles[0].multimedia} alt={articles[0].title} className="img-fluid" />
@@ -29,7 +29,7 @@ function Home() {
           )}
         </div>
 
-        <div className="col-md-4">
+        <div className="col-12 col-md-5">
           {articles.length > 1 && (
             <div className="article-card">
               <img src={articles[1].multimedia} alt={articles[1].title} className="img-fluid" />
@@ -44,7 +44,7 @@ function Home() {
       {/* Sezione con più articoli */}
       <div className="row">
         {articles.slice(2, 15).map((article, index) => (
-          <div key={index} className="col-md-4">
+          <div key={index} className="col-12 col-md-6">
             <div className="article-card">
               <img src={article.multimedia} alt={article.title} className="img-fluid" />
               <h2>{article.title}</h2>

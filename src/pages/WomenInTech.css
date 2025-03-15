@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Josefin+Sans:wght@100..700&family=Oswald:wght@200..700&family=Playfair+Display:wght@400..900&family=Sancreek&family=Work+Sans:wght@100..900&display=swap');
+
+
 /* Contenitore principale */
 .women-tech-container {
     margin: 40px auto;
@@ -22,8 +25,11 @@
   }
   
   .hero p {
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 10px;
+    color: #000;
+    background: #ffffff8f;
+    border-radius: 8px;
   }
   
   /* Sezione citazioni */

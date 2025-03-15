@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [currentDate, setCurrentDate] = useState(getFormattedDate());
+
 
   // Aggiorna lo stato quando cambia la dimensione dello schermo
   useEffect(() => {
@@ -18,9 +20,20 @@ function Header() {
       }
     };
 
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Effetto per aggiornare la data ogni giorno
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDate(getFormattedDate());
+    }, 86400000); // Aggiorna ogni 24 ore
+
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
     <header className="nyt-header">
@@ -28,10 +41,10 @@ function Header() {
       {!isMobile && (
         <div className="top-bar">
           <div className="calendar">
-            <span>Sunday, March 2, 2025</span>
+          <span>{currentDate}</span>
             <span>Today’s Paper</span>
           </div>
-          <span>U.S. | INTERNATIONAL | CANADA | ESPAÑOL | 中文</span>
+          <span className="world">U.S. | INTERNATIONAL | CANADA | ESPAÑOL | 中文</span>
           <button className="subscribe-btn">SUBSCRIBE FOR €0.50/WEEK</button>
           <span>
             Account{" "}
@@ -61,7 +74,7 @@ function Header() {
           {/* Top-bar dentro il menu mobile */}
           <div className="top-bar mobile-only">
             <div className="calendar">
-              <span>Sunday, March 2, 2025</span>
+              <span>{currentDate}</span>
               <span>Today’s Paper</span>
             </div>
             <span>U.S. | INTERNATIONAL | CANADA | ESPAÑOL | 中文</span>
@@ -75,21 +88,6 @@ function Header() {
           </div>
 
           {/* Navbar dentro il menu mobile */}
-          <nav className="nav-bar">
-          <ul>
-          <li>U.S. <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>World <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Business <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Arts <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Lifestyle <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Opinion <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Audio <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Games <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Cooking <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Wirecutter <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>The Athletic <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          </ul>
-          </nav>
 
           <nav className="custom-nav">
             <ul>
@@ -98,6 +96,22 @@ function Header() {
               <li><Link to="/science">Science</Link></li>
               <li><Link to="/women-in-tech">Women in Tech</Link></li>
             </ul>
+          </nav>
+
+          <nav className="nav-bar">
+          <ul>
+          <li><a href="https://www.nytimes.com/section/us">U.S. <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></a></li>
+          <li><a href="https://www.nytimes.com/section/world">World</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/section/business">Business</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/section/arts">Arts</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/spotlight/lifestyle">Lifestyle</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/section/opinion">Opinion</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/spotlight/podcasts">Audio</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/crosswords">Games</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://cooking.nytimes.com/">Cooking</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/wirecutter/">Wirecutter</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/athletic/uk/">The Athletic</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          </ul>
           </nav>
         </div>
       )}
@@ -108,16 +122,16 @@ function Header() {
           <nav className="nav-bar">
           <ul>
           <li><a href="https://www.nytimes.com/section/us">U.S. <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></a></li>
-          <li>World <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Business <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Arts <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Lifestyle <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Opinion <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Audio <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Games <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Cooking <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>Wirecutter <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
-          <li>The Athletic <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/section/world">World</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/section/business">Business</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/section/arts">Arts</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/spotlight/lifestyle">Lifestyle</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/section/opinion">Opinion</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/spotlight/podcasts">Audio</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/crosswords">Games</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://cooking.nytimes.com/">Cooking</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/wirecutter/">Wirecutter</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
+          <li><a href="https://www.nytimes.com/athletic/uk/">The Athletic</a> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></li>
           </ul>
           </nav>
 
@@ -133,6 +147,12 @@ function Header() {
       )}
     </header>
   );
+}
+
+// Funzione per ottenere la data formattata
+function getFormattedDate() {
+  const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+  return new Date().toLocaleDateString('en-US', options);
 }
 
 export default Header;
