@@ -37,7 +37,7 @@
 }
 
 .world{
-  margin-left: 300px;
+  margin-left: 250px;
 }
 
 .subscribe-btn {
@@ -59,11 +59,8 @@
 }
 
 /* Centra il logo al centro della sezione */
-.logo-section svg {
-  max-width: 40%;
-  position: relative;
-  left: 43%;
-  transform: translateX(-100%);
+.logo-section img {
+  width: 500px;
 }
 
 /* Stile del menu hamburger */
@@ -167,6 +164,35 @@
   text-underline-offset: 4px;
 }
 
+.dropdown-menu {
+  display: none; /* Nasconde il dropdown per default */
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.show {
+  display: block; /* Mostra il dropdown quando l'utente clicca */
+}
+
+.btn-secondary {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.btn-secondary:hover {
+  background-color: #444;
+}
+
+
 /* Responsive Design per Mobile */
 @media screen and (max-width: 768px) {
   /* Header diventa colonna */
@@ -178,7 +204,7 @@
     justify-content: space-between; /* Mantiene il layout tra logo e menu */
   }
 
-  .logo-section svg {
+  .logo-section img {
     position: static;
     transform: none;
     max-width: 50%; /* Adatta la dimensione del logo su mobile */
