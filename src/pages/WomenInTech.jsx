@@ -51,19 +51,19 @@ function WomenInTech() {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="/assets/emancipazione.png"  className="d-block w-100" alt="Emancipazione" />
+              <img src="/assets/emancipazione.webp"  className="d-block w-100" alt="Emancipazione" />
               <div className="carousel-caption  d-none d-md-block">
                 <p>Insieme, donne e tecnologia, per un mondo più equo.</p>
               </div>
             </div>
             <div className="carousel-item">
-              <img src="/assets/emancipazioneDue.png"  className="d-block w-100" alt="Emancipazione2" />
+              <img src="/assets/emancipazioneDue.webp"  className="d-block w-100" alt="Emancipazione2" />
               <div className="carousel-caption d-none d-md-block">
                 <p>Donne che innovano, tecnologie che cambiano il mondo.</p>
               </div>
             </div>
             <div className="carousel-item">
-              <img src="/assets/emancipazioneTre.png"  className="d-block w-100" alt="Emancipazione3" />
+              <img src="/assets/emancipazioneTre.webp"  className="d-block w-100" alt="Emancipazione3" />
               <div className="carousel-caption d-none d-md-block">
                 <p>Il futuro è scritto in codice... e al femminile.</p>
               </div>
@@ -100,7 +100,7 @@ function WomenInTech() {
         
 
         <article>
-        <img src="/assets/web-developer.jpg" alt="Pioniere del software" className="article-image" />
+        <img src="/assets/web-developer.webp" alt="Pioniere del software" className="article-image" />
           <h3>Donne nel Web Development</h3>
           <p>Le sviluppatrici che stanno rivoluzionando il mondo del frontend e backend, dando forma al futuro del web.</p>
           <div className="accordion accordion-flush" id="accordionFlushExample">
@@ -162,7 +162,7 @@ function WomenInTech() {
         </article>
 
         <article>
-        <img src="/assets/grace_hopper.jpg" alt="Pioniere del software" className="article-image" />
+        <img src="/assets/grace_hopper.webp" alt="Pioniere del software" className="article-image" />
           <h3>Le pioniere del software</h3>
           <p>Scopri la storia di Ada Lovelace, Grace Hopper e altre innovatrici che hanno segnato la storia del software.</p>
           <div className="accordion" id="accordionExample">
@@ -231,7 +231,7 @@ function WomenInTech() {
         </article>
 
         <article>
-        <img src="/assets/coder-girl.jpg" alt="Pioniere del software" className="article-image" />
+        <img src="/assets/coder-girl.webp" alt="Pioniere del software" className="article-image" />
           <h3>Intervista a una Software Engineer</h3>
           <p>Un'esclusiva con una donna che lavora nel settore tecnologico, tra sfide e opportunità.</p>
           <div className="accordion accordion-flush" id="accordionFlushExample">
