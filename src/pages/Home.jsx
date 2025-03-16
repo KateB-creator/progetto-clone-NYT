@@ -9,13 +9,13 @@ function Home() {
     const fetchArticles = async () => {
       const data = await getTopStories();
       console.log("Articoli ricevuti:", data.length); // Debug: Verifica quanti articoli arrivano
-      setArticles(data.slice(0, 10)); // Mostra fino a 10 articoli
+      setArticles(data.slice(0, 12)); 
     };
     fetchArticles();
   }, []);
 
   return (
-    <div className="container">
+    <div className="container text-center">
       {/* Sezione Hero: Primo articolo in evidenza */}
       <div className="row">
         <div className="col-md-7">
