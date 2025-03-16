@@ -17,7 +17,6 @@
   align-items: center;
   font-size: 12px;
   color: #666;
-  margin-bottom: 30px;
 }
 
 /* Mostra la top-bar solo su desktop */
@@ -33,7 +32,8 @@
 .calendar {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+  text-align: center;
 }
 
 .world{
@@ -47,6 +47,7 @@
   padding: 5px 10px;
   font-size: 12px;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 /* Sezione Logo + Menu Hamburger */
@@ -133,7 +134,7 @@
   border-bottom: 1px solid #ddd;
   padding: 5px 0;
   background-color: #fff;
-  display: flex; /* Assicura che sia visibile su desktop */
+  display: flex; 
   justify-content: center;
 }
 
@@ -144,7 +145,6 @@
   padding: 0;
   margin: 0;
   font-size: 14px;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -164,34 +164,6 @@
   text-underline-offset: 4px;
 }
 
-.dropdown-menu {
-  display: none; /* Nasconde il dropdown per default */
-  position: absolute;
-  background-color: white;
-  width: 100%;
-  left: 0;
-  top: 100%;
-  z-index: 10;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-menu.show {
-  display: block; /* Mostra il dropdown quando l'utente clicca */
-}
-
-.btn-secondary {
-  width: 100%;
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 18px;
-}
-
-.btn-secondary:hover {
-  background-color: #444;
-}
-
 
 /* Responsive Design per Mobile */
 @media screen and (max-width: 768px) {
@@ -207,7 +179,7 @@
   .logo-section img {
     position: static;
     transform: none;
-    max-width: 50%; /* Adatta la dimensione del logo su mobile */
+    max-width: 65%;
   }
 
   /* Nasconde la navbar principale e la custom-nav di default su mobile */
