@@ -12,7 +12,7 @@
     font-size: 60px;
   }
 
-  .women-tech-container p{
+  .women-tech-container p.text-1{
     font-family: "Lora", serif;
     font-size: 18px;
     font-weight: 200;
@@ -100,12 +100,17 @@
     text-decoration: underline;
   }
 
+  h6{
+    margin-top: 10px;
+    font-weight: 600;
+  }
+
   .article-image {
-    width: 100%; /* Larghezza adattabile */
-    max-width: 200px; /* Imposta una dimensione massima */
+    width: 100%; 
+    max-width: 200px; 
     display: block;
-    margin: 0 auto 15px; /* Centra l'immagine e aggiunge spazio sotto */
-    border-radius: 8px; /* Bordo arrotondato, opzionale */
+    margin: 0 auto 15px; 
+    border-radius: 8px; 
   }
 
   /* Immagini nelle citazioni */
@@ -136,7 +141,7 @@
 
 /* Cambia colore quando l'accordion è attivo */
 .accordion-button:not(.collapsed) {
-  background-color: #f8f9fa !important; /* Un colore più neutro */
+  background-color: #f8f9fa !important; 
   color: #000 !important;
 }
 
@@ -144,6 +149,11 @@
 .accordion-button:focus {
   box-shadow: none !important;
   border: none !important;
+}
+
+.accordion-body .testo-body{
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 /*sezione colonne*/
@@ -171,13 +181,21 @@
 
 .articleTwo .btn {
   margin-top: 10px;
+  margin-bottom: 20px;
+  color:#000;
+  background: #c2bfbf7d;
+  border: 1px solid #000;
+}
+
+.btn:hover{
+  background-color: #e1bbbb;
 }
 
 .details {
   margin-top: 15px;
   padding: 10px;
   background-color: #e9ecef;
-  border-left: 4px solid #007bff;
+  border-left: 4px solid #900;
   border-radius: 5px;
 }
 
@@ -201,7 +219,7 @@
   background-color: #ffffff;
   padding: 10px;
   margin-top: 10px;
-  border-left: 5px solid #007bff;
+  border-left: 5px solid #900;
   border-radius: 5px;
 }
 

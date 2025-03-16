@@ -42,11 +42,6 @@ function WomenInTech() {
   return (
     <div className="women-tech-container">
       <h1>Women in Tech</h1>
-      <p className="text-center">Nel mondo dello sviluppo web, le donne sono ancora una minoranza. Non per mancanza di talento, passione o competenze, ma per un sistema che, troppo spesso, le esclude o le sottovaluta. 
-      Eppure, le donne sviluppatrici stanno cambiando il settore: portano innovazione, creatività e un approccio inclusivo alla tecnologia. Dalle junior developer alle lead engineer, il loro contributo è essenziale.
-      E allora perché, nel 2025, dobbiamo ancora dimostrare di meritare il nostro posto? 
-      Abbiamo bisogno di più visibilità, di più role model, di più aziende che credano nel valore della diversità. Abbiamo bisogno di comunità solidali, di mentorship e di opportunità concrete.
-      Il web deve essere costruito da tutti e per tutti. Per questo, è fondamentale abbattere i pregiudizi e creare spazi in cui le donne possano crescere professionalmente senza ostacoli.</p>
       <header className="hero">
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
@@ -83,9 +78,14 @@ function WomenInTech() {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
+
+        <p className="text-center text-1">Nel mondo dello sviluppo web, le donne sono ancora una minoranza. Non per mancanza di talento, passione o competenze, ma per un sistema che, troppo spesso, le esclude o le sottovaluta. 
+          Eppure, le donne sviluppatrici stanno cambiando il settore: portano innovazione, creatività e un approccio inclusivo alla tecnologia. Dalle junior developer alle lead engineer, il loro contributo è essenziale.
+          E allora perché, nel 2025, dobbiamo ancora dimostrare di meritare il nostro posto? 
+          Abbiamo bisogno di più visibilità, di più role model, di più aziende che credano nel valore della diversità. Abbiamo bisogno di comunità solidali, di mentorship e di opportunità concrete.
+          Il web deve essere costruito da tutti e per tutti. Per questo, è fondamentale abbattere i pregiudizi e creare spazi in cui le donne possano crescere professionalmente senza ostacoli.</p>
       </header>
       
-
 
       <section className="quotes-section">
         <div className="quote">
@@ -97,6 +97,70 @@ function WomenInTech() {
       </section>
 
       <section className="articles">
+        
+
+        <article>
+        <img src="/assets/web-developer.jpg" alt="Pioniere del software" className="article-image" />
+          <h3>Donne nel Web Development</h3>
+          <p>Le sviluppatrici che stanno rivoluzionando il mondo del frontend e backend, dando forma al futuro del web.</p>
+          <div className="accordion accordion-flush" id="accordionFlushExample">
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <strong>Reshma Saujani – L’attivista che ha creato Girls Who Code</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div className="accordion-body">
+                  Reshma Saujani è la fondatrice di <strong>Girls Who Code</strong>, un'organizzazione che promuove l’inclusione delle donne nella programmazione e nelle STEM.
+                  <h6>💡 Perché è importante?</h6>
+                  <p>Ha creato un movimento globale per ridurre il divario di genere nel mondo della tecnologia, ispirando migliaia di ragazze a intraprendere carriere nel coding.</p>
+                  <h6>📌 Una curiosità?</h6>
+                  <p>Reshma ha scritto il libro "Brave, Not Perfect", in cui incoraggia le donne a superare la paura di sbagliare e a lanciarsi nel mondo della tecnologia.</p>
+                  <p>💬 Hai mai provato a programmare? Qual è stata la tua esperienza? Scrivilo nei commenti!</p>
+                </div>              
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 className="accordion-header">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                 <strong>Barbara Liskov – La donna che ha rivoluzionato la programmazione</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div className="accordion-body">È una delle più grandi pioniere della programmazione moderna e ha sviluppato concetti fondamentali per il software, tra cui il Liskov Substitution Principle (LSP), che ha influenzato profondamente la programmazione orientata agli oggetti.
+                <h6>💡 Perché è importante?</h6>
+                <p> Il suo lavoro ha reso la programmazione più efficiente e organizzata, facilitando lo sviluppo di software scalabili e robusti. Senza di lei, i linguaggi come Java, C++ e Python sarebbero molto diversi!</p>
+                <h6>📌 Una curiosità?</h6>
+                <p>Nel 2008 ha ricevuto il Turing Award, il premio Nobel dell’informatica, per il suo straordinario contributo.</p>
+                <p> 💬 Qual è il tuo linguaggio di programmazione preferito? Scrivilo nei commenti!</p>
+                </div> 
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <strong>Sviluppatrici Open Source – Le donne che stanno innovando il codice aperto</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseThree"className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div className="accordion-body">
+                  L'Open Source è uno dei settori più importanti nel mondo dello sviluppo software, e molte donne stanno contribuendo con codice, documentazione e innovazione a progetti di grande impatto.
+                  <h6>💡 Chi sono alcune delle protagoniste?</h6>
+                  <ol>
+                    <li><strong>Coraline Ada Ehmke</strong> – Ha creato il Contributor Covenant, uno dei codici di condotta più utilizzati nei progetti Open Source per rendere la tecnologia più inclusiva.</li>
+                    <li><strong>Tracy Chou</strong> – Ha contribuito a migliorare la trasparenza sui dati sulla diversità nelle aziende tech e ha lavorato su progetti Open Source per l’uguaglianza di genere.</li>
+                    <li><strong>Julia Evans</strong> – Conosciuta per i suoi tutorial tecnici e le guide illustrative su Linux e programmazione backend, aiutando nuovi sviluppatori a entrare nel mondo dell'Open Source.</li>
+                  </ol>
+                  <h6>📌 Perché è importante?</h6>
+                  <p> Il mondo dell’Open Source offre un’opportunità unica per le donne di contribuire e dimostrare il loro talento senza le tradizionali barriere aziendali. Sempre più sviluppatrici stanno avendo un impatto significativo in questo settore.</p>
+                  <p>💬 Hai mai contribuito a un progetto Open Source? Se sì, quale? Scrivilo nei commenti!</p>
+                </div>             
+              </div>
+            </div>
+          </div>
+        </article>
+
         <article>
         <img src="/assets/grace_hopper.jpg" alt="Pioniere del software" className="article-image" />
           <h3>Le pioniere del software</h3>
@@ -164,68 +228,6 @@ function WomenInTech() {
             </div>
           </div>
         </div>
-        </article>
-
-        <article>
-        <img src="/assets/coder-girl.jpg" alt="Pioniere del software" className="article-image" />
-          <h3>Donne nel Web Development</h3>
-          <p>Le sviluppatrici che stanno rivoluzionando il mondo del frontend e backend, dando forma al futuro del web.</p>
-          <div className="accordion accordion-flush" id="accordionFlushExample">
-            <div className="accordion-item">
-              <h2 className="accordion-header">
-                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                <strong>Reshma Saujani – L’attivista che ha creato Girls Who Code</strong>
-                </button>
-              </h2>
-              <div id="flush-collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div className="accordion-body">
-                  Reshma Saujani è la fondatrice di <strong>Girls Who Code</strong>, un'organizzazione che promuove l’inclusione delle donne nella programmazione e nelle STEM.
-                  <h6>💡 Perché è importante?</h6>
-                  <p>Ha creato un movimento globale per ridurre il divario di genere nel mondo della tecnologia, ispirando migliaia di ragazze a intraprendere carriere nel coding.</p>
-                  <h6>📌 Una curiosità?</h6>
-                  <p>Reshma ha scritto il libro "Brave, Not Perfect", in cui incoraggia le donne a superare la paura di sbagliare e a lanciarsi nel mondo della tecnologia.</p>
-                  <p>💬 Hai mai provato a programmare? Qual è stata la tua esperienza? Scrivilo nei commenti!</p>
-                </div>              
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 className="accordion-header">
-                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                 <strong>Barbara Liskov – La donna che ha rivoluzionato la programmazione</strong>
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div className="accordion-body">È una delle più grandi pioniere della programmazione moderna e ha sviluppato concetti fondamentali per il software, tra cui il Liskov Substitution Principle (LSP), che ha influenzato profondamente la programmazione orientata agli oggetti.
-                <h6>💡 Perché è importante?</h6>
-                <p> Il suo lavoro ha reso la programmazione più efficiente e organizzata, facilitando lo sviluppo di software scalabili e robusti. Senza di lei, i linguaggi come Java, C++ e Python sarebbero molto diversi!</p>
-                <h6>📌 Una curiosità?</h6>
-                <p>Nel 2008 ha ricevuto il Turing Award, il premio Nobel dell’informatica, per il suo straordinario contributo.</p>
-                <p> 💬 Qual è il tuo linguaggio di programmazione preferito? Scrivilo nei commenti!</p>
-                </div> 
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h2 className="accordion-header">
-                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                <strong>Sviluppatrici Open Source – Le donne che stanno innovando il codice aperto</strong>
-                </button>
-              </h2>
-              <div id="flush-collapseThree"className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div className="accordion-body">
-                  L'Open Source è uno dei settori più importanti nel mondo dello sviluppo software, e molte donne stanno contribuendo con codice, documentazione e innovazione a progetti di grande impatto.
-                  <h6>💡 Chi sono alcune delle protagoniste?</h6>
-                  <ol>
-                    <li><strong>Coraline Ada Ehmke</strong> – Ha creato il Contributor Covenant, uno dei codici di condotta più utilizzati nei progetti Open Source per rendere la tecnologia più inclusiva.</li>
-                    <li><strong>Tracy Chou</strong> – Ha contribuito a migliorare la trasparenza sui dati sulla diversità nelle aziende tech e ha lavorato su progetti Open Source per l’uguaglianza di genere.</li>
-                    <li><strong>Julia Evans</strong> – Conosciuta per i suoi tutorial tecnici e le guide illustrative su Linux e programmazione backend, aiutando nuovi sviluppatori a entrare nel mondo dell'Open Source.</li>
-                  </ol>
-                  <h6>📌 Perché è importante?</h6>
-                  <p> Il mondo dell’Open Source offre un’opportunità unica per le donne di contribuire e dimostrare il loro talento senza le tradizionali barriere aziendali. Sempre più sviluppatrici stanno avendo un impatto significativo in questo settore.</p>
-                  <p>💬 Hai mai contribuito a un progetto Open Source? Se sì, quale? Scrivilo nei commenti!</p>
-                </div>             
-              </div>
-            </div>
-          </div>
         </article>
 
         <article>
