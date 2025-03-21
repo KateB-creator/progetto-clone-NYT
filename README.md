@@ -87,3 +87,8 @@ L'API è integrata attraverso nytAPI.js per recuperare:
 🔍 Article Search – Ricerca avanzata di articoli.
 
 📊 Most Popular – Articoli più letti e condivisi.
+
+
+link utili:
+github: https://github.com/KateB-creator/progetto-clone-NYT
+link applicazione: https://nyt-clone-bk.netlify.app/
