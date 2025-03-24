@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound';
 import Header from './components/Header/Header';
-import Footer from 'src/components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 import CategoryPage from './pages/CategoryPage/CategoryPage';
 import Science from './pages/Science/Science';
 import Technology from './pages/Technology/Technology';
