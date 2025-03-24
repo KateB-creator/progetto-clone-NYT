@@ -1,25 +1,31 @@
-import { useEffect, useState } from 'react';
-import { getTopStories } from '../services/nytAPI';
+import { useEffect, useState } from 'react'; 
+import { getTopStories } from '../../services/nytAPI';
 import './Home.css';
+import Loader from '../../components/Loader/Loader'; 
 
 function Home() {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchArticles = async () => {
+      setLoading(true);
       const data = await getTopStories();
-      console.log("Articoli ricevuti:", data.length); // Debug: Verifica quanti articoli arrivano
-      setArticles(data.slice(0, 12)); 
+      console.log("Articoli ricevuti:", data.length);
+      setArticles(data.slice(0, 12));
+      setLoading(false); 
     };
     fetchArticles();
   }, []);
 
+  if (loading) return <Loader />; 
+
   return (
     <div className="container text-center">
-      {/* Sezione Hero: Primo articolo in evidenza */}
+      {/* Sezione Hero */}
       <div className="row">
         <div className="col-md-7">
-          {articles.length > 0 && (
+          {articles?.[0] && (
             <div className="article-card article-hero">
               <img src={articles[0].multimedia} alt={articles[0].title} className="img-fluid" />
               <h2>{articles[0].title}</h2>
@@ -30,7 +36,7 @@ function Home() {
         </div>
 
         <div className="col-12 col-md-5">
-          {articles.length > 1 && (
+          {articles?.[1] && (
             <div className="article-card">
               <img src={articles[1].multimedia} alt={articles[1].title} className="img-fluid" />
               <h2>{articles[1].title}</h2>
@@ -41,9 +47,9 @@ function Home() {
         </div>
       </div>
 
-      {/* Sezione con più articoli */}
+      {/* Altri articoli */}
       <div className="row">
-        {articles.slice(2, 15).map((article, index) => (
+        {articles.slice(2).map((article, index) => (
           <div key={index} className="col-12 col-md-6">
             <div className="article-card">
               <img src={article.multimedia} alt={article.title} className="img-fluid" />

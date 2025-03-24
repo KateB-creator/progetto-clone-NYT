@@ -1,0 +1,30 @@
+.container {
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  

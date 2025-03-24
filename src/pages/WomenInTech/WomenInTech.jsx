@@ -121,7 +121,7 @@ function WomenInTech() {
                 </div>              
               </div>
             </div>
-            <div class="accordion-item">
+            <div className="accordion-item">
               <h2 className="accordion-header">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                  <strong>Barbara Liskov – La donna che ha rivoluzionato la programmazione</strong>

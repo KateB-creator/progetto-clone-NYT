@@ -1,94 +1,101 @@
-# React + Vite
+📰 Clone New York Times – React + Vite
+Questa applicazione è una piattaforma dinamica e responsive per esplorare notizie in tempo reale tramite l’integrazione con l’API ufficiale del New York Times.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-
-Progetto: Piattaforma di Notizie Integrata con il New York Times
 
 📖 Descrizione
-
-Questa applicazione è una piattaforma dinamica che consente di recuperare, visualizzare e analizzare articoli di notizie, con un'integrazione avanzata con l'API del New York Times. L'obiettivo è offrire agli utenti un'interfaccia intuitiva e moderna per esplorare le notizie in tempo reale.
-
-🚀 Tecnologie Utilizzate
+L'app consente di recuperare, visualizzare e analizzare articoli per sezioni tematiche come World, Technology, Business, Cooking, Arts, The Athletic e molte altre.
+Include anche una pagina speciale chiamata Women in Tech, con contenuti editoriali e interazione tramite commenti locali.
 
 
-🖥 React.js – Libreria per la creazione dell’interfaccia utente.
 
-🎨 Bootstrap – Framework CSS per il design responsive e moderno.
+🚀 Tecnologie Utilizzate:
 
-🔗 Axios – Per le richieste HTTP all’API del New York Times.
+⚛️ React.js – Libreria per la creazione di interfacce moderne
 
-⚡ Vite – Bundler veloce per lo sviluppo di progetti React.
+⚡ Vite – Bundler ultra veloce per progetti React
 
-🏗 Node.js 
+🎨 Bootstrap – Framework CSS per un design responsive
 
+🔗 Axios – Per comunicare con le API del New York Times
+
+🌐 React Router DOM – Per la navigazione tra le pagine
+
+📦 Node.js – Per la gestione del progetto e dipendenze
 
 📂 Struttura delle Cartelle
+php
+Copia
+Modifica
+src/
+├── components/        # Componenti riutilizzabili (Header, Footer, Loader, ecc.)
+├── pages/             # Pagine dinamiche e statiche (Home, Science, SectionPage...)
+│   └── SectionPage/   # Pagina dinamica per tutte le sezioni NYT
+├── services/          # nytAPI.js per le chiamate HTTP
+├── assets/            # Immagini, icone e media
+├── styles/            # Eventuali stili globali
+├── App.jsx            # Componente principale
+└── main.jsx           # Entry point dell'app
+public/
+├── index.html         # Template HTML
 
-assets/ – Contiene immagini e icone.
 
-src/ – Contiene il codice principale del progetto:
 
-components/ – Componenti riutilizzabili come Header.jsx e Footer.jsx.
+📜 Funzionalità Principali:
 
-pages/ – Pagine principali (Home.jsx, WomenInTech.jsx, Technology.jsx, ecc.).
-
-services/ – File nytAPI.js per le chiamate all’API.
-
-styles/ – File CSS per la gestione degli stili globali.
-
-App.jsx / main.jsx – Entry point dell'applicazione.
-
-public/ – Contiene index.html e altre risorse pubbliche.
-
-config/ – Configurazioni per il backend e il database.
-
-📜 Funzionalità Principali
-
-✅ Recupero degli articoli – Dall'API del New York Times in tempo reale.
-✅ Struttura responsive – Design adattabile su qualsiasi dispositivo.
-✅ Navigazione fluida – Con React Router per le diverse sezioni.
-✅ Commenti e interazione – Salvataggio locale dei commenti sulla pagina Women in Tech.
+✅ Recupero degli articoli per sezione tramite API NYT
+✅ Navigazione dinamica tramite rotta /section/:sectionName
+✅ Gestione dei commenti locali su Women in Tech
+✅ Design responsive per desktop e mobile
+✅ Menu a tendina con tutte le sezioni integrate
+✅ Loader in fase di caricamento articoli
+✅ Gestione degli errori in caso di troppi accessi all'API (Errore 429)
 
 
 🔌 Installazione e Avvio
 
-1️⃣ Clona il repository:
+1️⃣ Clona il progetto:
 
- git clone https://github.com/tuo-utente/tuo-repository.git
- cd tuo-repository
-
+bash
+Copia
+Modifica
+git clone https://github.com/KateB-creator/progetto-clone-NYT
+cd progetto-clone-NYT
 2️⃣ Installa le dipendenze:
 
+bash
+Copia
+Modifica
 npm install
+3️⃣ Crea un file .env e inserisci la tua API Key NYT:
 
-3️⃣ Avvia il progetto:
+ini
+Copia
+Modifica
+VITE_NYT_API_KEY=la-tua-api-key
+4️⃣ Avvia l'app in modalità sviluppo:
 
+bash
+Copia
+Modifica
 npm run dev
+🔗 Vai su http://localhost:5173/ per usare l'app.
 
-4️⃣ Accedi all'applicazione:
-Apri il browser e vai su http://localhost:5173/ (se usi Vite).
+🌐 Integrazione con le API del New York Times
+La comunicazione avviene tramite il file nytAPI.js.
+L'app supporta:
 
-🔗 API del New York Times
+📌 Top Stories – Notizie principali per ogni sezione
 
-L'API è integrata attraverso nytAPI.js per recuperare:
+🔍 Ricerca articoli (espandibile)
 
-📌 Top Stories – Le notizie principali per sezione.
+📊 Most Popular (espandibile)
 
-🔍 Article Search – Ricerca avanzata di articoli.
+🔗 Link Utili:
 
-📊 Most Popular – Articoli più letti e condivisi.
+🌐 Deploy Netlify: nyt-clone-bk.netlify.app
 
+💻 Codice sorgente GitHub: github.com/KateB-creator/progetto-clone-NYT
 
-link utili:
-github: https://github.com/KateB-creator/progetto-clone-NYT
-link applicazione: https://nyt-clone-bk.netlify.app/
+📅 Ultimo aggiornamento: 24 marzo 2025
+✍️ Creato da Katiuscia Balia
+
